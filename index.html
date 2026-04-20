@@ -443,6 +443,7 @@
     .menu-img-wrap img {
       width: 100%;
       display: block;
+      cursor: pointer;
     }
 
     .menu-img-label {
@@ -457,6 +458,40 @@
       padding: 5px 12px;
       border-radius: 3px;
       border: 1px solid rgba(0,229,255,0.25);
+    }
+
+    .menu-image-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 1000;
+    }
+
+    .menu-image-modal.active {
+      display: flex;
+    }
+
+    .menu-image-modal img {
+      max-width: min(1312px, 95vw);
+      max-height: 90vh;
+      border-radius: 12px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65);
+    }
+
+    .menu-image-modal-close {
+      position: absolute;
+      top: 18px;
+      right: 24px;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
     }
 
     /* ── ÜBER UNS ── */
@@ -835,7 +870,11 @@
 
   <!-- NAVBAR -->
   <nav>
-    <a href="#hero" class="nav-logo">FEHMI'S <span>GEMÜSE KEBAP</span></a>
+    <a href="#hero" class="nav-logo">
+      FEHMI'S 
+      <span>🥙</span>
+    </a>
+    <!-- <span>GEMÜSE KEBAP</span> -->
     <ul class="nav-links">
       <li><a href="#ueber-uns">Über uns</a></li>
       <li><a href="#speisekarte">Speisekarte</a></li>
@@ -852,7 +891,7 @@
       <div class="hero-badge">🌿 Direkt am Bahnhof in Goslar</div>
       <h1 class="hero-title">
         FEHMI'S
-        <span class="hl">GEMÜSE KEBAP</span>
+        <span class="hl">GEMÜSE KEBAP 🥙</span>
       </h1>
       <p class="hero-sub">Frische Zutaten, authentischer Geschmack – Goslar's beste Döner-Adresse seit Jahren.</p>
       <div class="hero-tags">
@@ -880,7 +919,7 @@
     <div class="spez-layout">
       <div class="spez-image-wrap reveal">
         <div class="spez-placeholder">
-          <div class="placeholder-icon">🥙</div>
+          <div class="placeholder-icon"></div>
           <div class="placeholder-text">Spezialitäten Bild</div>
         </div>
         <div class="spez-corner"></div>
@@ -1128,6 +1167,18 @@
     </div>
   </footer>
 
+  <div id="menuImageModal" class="menu-image-modal" aria-hidden="true">
+    <button
+      type="button"
+      class="menu-image-modal-close"
+      id="menuImageModalClose"
+      aria-label="Popup schließen"
+    >
+      ×
+    </button>
+    <img id="menuImageModalImg" alt="Vergrößerte Speisekarte" />
+  </div>
+
   <script>
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
@@ -1147,6 +1198,42 @@
       nav.style.background = window.scrollY > 60
         ? 'rgba(13,27,30,0.98)'
         : 'rgba(13,27,30,0.92)';
+    });
+
+    // Popup for menu images
+    const menuImageModal = document.getElementById('menuImageModal');
+    const menuImageModalImg = document.getElementById('menuImageModalImg');
+    const menuImageModalClose = document.getElementById('menuImageModalClose');
+    const clickableMenuImages = document.querySelectorAll(
+      '.menu-img-wrap img[src*="Speisekarte1"], .menu-img-wrap img[src*="Speisekarte2"]'
+    );
+
+    const closeMenuImageModal = () => {
+      menuImageModal.classList.remove('active');
+      menuImageModal.setAttribute('aria-hidden', 'true');
+      menuImageModalImg.src = '';
+    };
+
+    clickableMenuImages.forEach((img) => {
+      img.addEventListener('click', () => {
+        menuImageModalImg.src = img.src;
+        menuImageModalImg.alt = img.alt;
+        menuImageModal.classList.add('active');
+        menuImageModal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    menuImageModalClose.addEventListener('click', closeMenuImageModal);
+    menuImageModal.addEventListener('click', (event) => {
+      if (event.target === menuImageModal) {
+        closeMenuImageModal();
+      }
+    });
+
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        closeMenuImageModal();
+      }
     });
   </script>
 </body>
