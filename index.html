@@ -306,17 +306,13 @@
       position: relative;
     }
 
-    .spez-placeholder {
+    .spezialitaeten-img {
       width: 100%;
       aspect-ratio: 4/3;
       border-radius: 12px;
       background: linear-gradient(135deg, var(--bg-card) 0%, #1a3840 100%);
       border: 1px solid rgba(0,154,173,0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
+    
       position: relative;
       overflow: hidden;
     }
@@ -918,10 +914,8 @@
   <section id="spezialitaeten">
     <div class="spez-layout">
       <div class="spez-image-wrap reveal">
-        <div class="spez-placeholder">
-          <div class="placeholder-icon"></div>
-          <div class="placeholder-text">Spezialitäten Bild</div>
-        </div>
+        <img src="./images/Gericht2.jpg" alt="Unsere Spezialität" class="spezialitaeten-img" loading="lazy" />
+  
         <div class="spez-corner"></div>
         <div class="spez-corner-bl"></div>
       </div>
