@@ -47,6 +47,10 @@
       transition: background 0.3s;
     }
 
+    .fehmis-img {
+      width: 169px;
+    }
+    
     .nav-logo {
       font-family: 'Oswald', sans-serif;
       font-size: 1.6rem;
@@ -150,19 +154,8 @@
       animation: fadeUp 0.7s ease both;
     }
 
-    .hero-title {
-      font-family: 'Oswald', sans-serif;
-      font-size: clamp(3.2rem, 8vw, 6.5rem);
-      font-weight: 700;
-      line-height: 1;
-      letter-spacing: -1px;
-      color: #fff;
-      animation: fadeUp 0.8s 0.15s ease both;
-    }
-
-    .hero-title .hl {
-      color: var(--accent);
-      display: block;
+    .logo-img {
+      width: 100%;
     }
 
     .hero-sub {
@@ -843,7 +836,8 @@
     /* ── MOBILE ── */
     @media (max-width: 768px) {
       nav { padding: 14px 14px 0 14px; }
-      .nav-logo { line-height: 1.2;}
+      .fehmis-img { width: 108px; }
+      .nav-logo { line-height: 1.2; }
       .nav-links { gap: 9px; }
       .nav-links a { font-size: 0.8rem; letter-spacing: 0.8px; }
 
@@ -868,10 +862,10 @@
   <!-- NAVBAR -->
   <nav>
     <a href="#hero" class="nav-logo">
-      FEHMI'S 
-      <span>🥙</span>
+     
+      <img src="./images/Fehmis.png" alt="Unser Logo" class="fehmis-img" loading="lazy"/>
     </a>
-    <!-- <span>GEMÜSE KEBAP</span> -->
+    <!-- <span>GEMÜSE KEBAP🥙</span> -->
     <ul class="nav-links">
       <li><a href="#ueber-uns">Über</a></li>
       <li><a href="#speisekarte">Speisekarte</a></li>
@@ -886,10 +880,12 @@
     <div class="hero-grid"></div>
     <div class="hero-content">
       <div class="hero-badge">🌿 Direkt am Bahnhof in Goslar</div>
-      <h1 class="hero-title">
-        FEHMI'S
-        <span class="hl">GEMÜSE KEBAP 🥙</span>
-      </h1>
+      <div class="spez-image-wrap reveal visible">
+        <img src="./images/Logo.png" alt="Unser Logo" class="logo-img" loading="lazy">
+  
+        <div class="spez-corner"></div>
+        <div class="spez-corner-bl"></div>
+      </div>
       <p class="hero-sub">Frische Zutaten, authentischer Geschmack – Goslar's beste Döner-Adresse seit Jahren.</p>
       <div class="hero-tags">
         <span class="hero-tag">Kebap</span>
