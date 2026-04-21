@@ -51,19 +51,6 @@
       width: 169px;
     }
     
-    .nav-logo {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 1px;
-      text-decoration: none;
-    }
-
-    .nav-logo span {
-      color: var(--text-light);
-    }
-
     .nav-links {
       display: flex;
       gap: 36px;
@@ -106,6 +93,40 @@
 
     .nav-cta:hover { background: var(--teal-light) !important; }
     .nav-cta::after { display: none !important; }
+
+    .nav-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(0, 154, 173, 0.45);
+      background: rgba(0, 154, 173, 0.1);
+      border-radius: 8px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-toggle .bar {
+      width: 18px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-open .nav-toggle .bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-open .nav-toggle .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-open .nav-toggle .bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
 
     /* ── HERO ── */
     #hero {
@@ -483,6 +504,42 @@
       cursor: pointer;
     }
 
+    /* ── LIEFERSERVICE ── */
+    #lieferservice {
+      padding: 100px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .delivery-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .delivery-image-wrap {
+      position: relative;
+      border-radius: 12px;
+      
+      border: 1px solid rgba(0,154,173,0.25);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .delivery-image-wrap img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    .delivery-text p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 550px;
+    }
+
     /* ── ÜBER UNS ── */
     #ueber-uns {
       padding: 100px 40px;
@@ -835,25 +892,54 @@
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
-      nav { padding: 14px 14px 0 14px; }
+      nav {
+        padding: 14px;
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+      }
       .fehmis-img { width: 108px; }
       .nav-logo { line-height: 1.2; }
-      .nav-links { gap: 9px; }
-      .nav-links a { font-size: 0.8rem; letter-spacing: 0.8px; }
+      .nav-toggle { display: inline-flex; }
+      .nav-links {
+        display: none;
+        width: 100%;
+        margin-top: 12px;
+        padding: 10px 4px 4px;
+        flex-direction: column;
+        align-items: end;
+        gap: 10px;
+      }
+      .nav-open .nav-links { display: flex; }
+      .nav-links a { font-size: 0.9rem; letter-spacing: 0.8px; }
 
       .spez-layout,
+      .delivery-layout,
       .ueber-layout,
       .kontakt-layout { grid-template-columns: 1fr; gap: 40px; }
 
       .features-grid { grid-template-columns: 1fr; }
       .stats-row { gap: 24px; flex-wrap: wrap; }
 
-      #spezialitaeten, #speisekarte, #ueber-uns, #kontakt, #impressum {
+      #spezialitaeten, #speisekarte, #lieferservice, #ueber-uns, #kontakt, #impressum {
         padding: 70px 20px;
       }
 
       .hero-buttons { flex-direction: column; align-items: center; }
       .menu-header { flex-direction: column; }
+    }
+
+    .sp-flex1 {
+      align-self: start;
+    }
+
+    .sp-flex2 {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      max-width: 280px;
+      text-align: right;
+      line-height: 1.6;
+      align-self: end;
     }
   </style>
 </head>
@@ -865,10 +951,16 @@
      
       <img src="./images/Fehmis.png" alt="Unser Logo" class="fehmis-img" loading="lazy"/>
     </a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primaryNav">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
     <!-- <span>GEMÜSE KEBAP🥙</span> -->
-    <ul class="nav-links">
+    <ul class="nav-links" id="primaryNav">
       <li><a href="#ueber-uns">Über</a></li>
       <li><a href="#speisekarte">Speisekarte</a></li>
+      <li><a href="#lieferservice">Lieferservice</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
       <li><a href="#impressum">Impressum</a></li>
     </ul>
@@ -951,11 +1043,11 @@
   <!-- SPEISEKARTE -->
   <section id="speisekarte">
     <div class="menu-header reveal">
-      <div>
+      <div class="sp-flex1">
         <div class="section-label">Was wir bieten</div>
         <h2 class="section-title">Unsere Speisekarte</h2>
       </div>
-      <p style="color: var(--text-muted); font-size: 0.9rem; max-width: 280px; text-align: right; line-height: 1.6;">
+      <p  class="sp-flex2">
         Alle Preise inkl. MwSt. </br> 
         Änderungen vorbehalten.
       </p>
@@ -968,6 +1060,24 @@
       <div class="menu-img-wrap reveal reveal-delay-1">
         <img src="./images/Speisekarte2.jpeg" alt="Speisekarte Seite 2 – Fehmi's Gemüse Kebap" loading="lazy" />
         <div class="menu-img-label">Seite 2</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- LIEFERSERVICE -->
+  <section id="lieferservice">
+    <div class="delivery-layout">
+      <div class="delivery-image-wrap reveal">
+        <img src="./images/Lieferservice.jpg" alt="Bild für Lieferservice" class="lieferservice-img" loading="lazy" />
+        <div class="spez-corner"></div>
+        <div class="spez-corner-bl"></div>
+      </div>
+      <div class="delivery-text reveal reveal-delay-1">
+        <div class="section-label">Für Ihre Veranstaltung</div>
+        <h2 class="section-title">Lieferservice</h2>
+        <p>Lieferservice in Goslar und Umgebung ab 10 Personen. Lassen Sie sich auf ihrer nächsten Geburtstags- oder Betriebsfeier verwöhnen.</p>
       </div>
     </div>
   </section>
@@ -1150,6 +1260,7 @@
     <ul class="footer-links">
       <li><a href="#ueber-uns">Über uns</a></li>
       <li><a href="#speisekarte">Speisekarte</a></li>
+      <li><a href="#lieferservice">Lieferservice</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
       <li><a href="#impressum">Impressum</a></li>
     </ul>
@@ -1190,6 +1301,29 @@
       nav.style.background = window.scrollY > 60
         ? 'rgba(13,27,30,0.98)'
         : 'rgba(13,27,30,0.92)';
+    });
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('primaryNav');
+
+    const setMobileMenuState = (open) => {
+      nav.classList.toggle('nav-open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    };
+
+    navToggle.addEventListener('click', () => {
+      const willOpen = !nav.classList.contains('nav-open');
+      setMobileMenuState(willOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          setMobileMenuState(false);
+        }
+      });
     });
 
     // Popup for menu images
