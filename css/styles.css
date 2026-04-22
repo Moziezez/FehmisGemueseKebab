@@ -8,9 +8,9 @@
     --text-light: whitesmoke;
     --text-muted: #fff3e0e0;
     --accent: #00e5ff;
-    --gold: #f0c060;
+    --gold: #f0cc60;
     --highlight: #ffc78b;
-    --highlight2: #fff6ede3;
+    --highlight2: #ffecb5c9;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -20,8 +20,9 @@
   body {
     font-family: 'Nunito', sans-serif;
     background: var(--bg-dark);
-    color: var(--text-light);
+    color: var(--text-muted);
     overflow-x: hidden;
+    cursor: default;
   }
 
   /* ── NAVBAR ── */
@@ -40,6 +41,12 @@
     transition: background 0.3s;
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
   .fehmis-img {
     width: 169px;
   }
@@ -55,7 +62,7 @@
     font-size: 0.95rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: var(--highlight2);
+    color: var(--text-muted);
     text-decoration: none;
     position: relative;
     transition: color 0.25s;
@@ -104,7 +111,7 @@
   .nav-toggle .bar {
     width: 18px;
     height: 2px;
-    background: var(--highlight);
+    background: var(--teal-dark);
     border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.25s ease;
   }
@@ -176,7 +183,7 @@
   .hero-sub {
     margin-top: 20px;
     font-size: 1.15rem;
-    color: var(--highlight2);
+    color: var(--text-muted);
     max-width: 500px;
     margin-inline: auto;
     animation: fadeUp 0.8s 0.3s ease both;
@@ -189,6 +196,9 @@
     justify-content: center;
     margin-top: 32px;
     animation: fadeUp 0.8s 0.45s ease both;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-tag {
@@ -197,7 +207,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--text-muted);
-    border: 1px solid var(--highlight2); /* rgba(0,154,173,0.4); */
+    border: 1px solid var(--teal-deeper); /* rgba(0,154,173,0.4); */
     padding: 6px 16px;
     border-radius: 3px;
     background: rgba(0,154,173,0.08);
@@ -218,11 +228,10 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     background: var(--teal-deeper);
-    color: var(--text-muted);
-    border: 1px solid var(--highlight);
+    color: var(--gold);
+    border: 1px solid var(--highlight2);
     padding: 14px 36px;
     border-radius: 4px;
-    cursor: pointer;
     text-decoration: none;
     transition: background 0.25s, transform 0.2s;
   }
@@ -235,11 +244,10 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     background: transparent;
-    color: var(--gold);
+    color: var(--highlight);
     border: 1px solid var(--highlight2);
     padding: 14px 36px;
     border-radius: 4px;
-    cursor: pointer;
     text-decoration: none;
     transition: background 0.25s, color 0.25s, transform 0.2s;
   }
@@ -248,7 +256,7 @@
     background: rgba(0,229,255,0.1);
     transform: translateY(-2px);
     border-color: var(--highlight);
-    color: var(--highlight)
+    color: var(--gold)
   }
 
   .scroll-indicator {
@@ -260,7 +268,7 @@
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    color: var(--highlight2);
+    color: var(--text-muted);
     font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -285,7 +293,7 @@
     font-size: 0.88rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--highlight);
+    color: var(--gold);
     margin-bottom: 12px;
   }
 
@@ -293,7 +301,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
-    color: var(--teal-dark);
+    color: var(--teal-light);
     margin-bottom: 14px;
   }
 
@@ -353,8 +361,8 @@
     position: absolute;
     top: -10px; right: -10px;
     width: 80px; height: 80px;
-    border-top: 2px solid var(--highlight2);
-    border-right: 2px solid var(--highlight2);
+    border-top: 2px solid var(--teal-deeper);
+    border-right: 2px solid var(--teal-deeper);
     border-radius: 0 12px 0 0;
   }
 
@@ -362,8 +370,8 @@
     position: absolute;
     bottom: -10px; left: -10px;
     width: 80px; height: 80px;
-    border-bottom: 2px solid var(--highlight2);
-    border-left: 2px solid var(--highlight2);
+    border-bottom: 2px solid var(--teal-deeper);
+    border-left: 2px solid var(--teal-deeper);
     border-radius: 0 0 0 12px;
   }
 
@@ -376,10 +384,11 @@
 
   .feature-card {
     background: var(--bg-card);
-    border: 1px solid var(--highlight);
+    border: 1px solid var(--teal-deeper);
     border-radius: 8px;
     padding: 20px;
     transition: border-color 0.25s, transform 0.25s;
+    cursor: pointer;
   }
 
   .feature-card:hover {
@@ -396,7 +405,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: 1rem;
     letter-spacing: 0.5px;
-    color: var(--highlight);
+    color: var(--gold);
     margin-bottom: 4px;
   }
 
@@ -638,7 +647,8 @@
     font-family: 'Oswald', sans-serif;
     font-size: 2.4rem;
     font-weight: 700;
-    color: var(--accent);
+    color: var(--gold);
+    text-align: center;
   }
 
   .stat-label {
@@ -661,6 +671,7 @@
     margin-bottom: 16px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
   }
 
   .info-card .info-img {
@@ -668,6 +679,11 @@
     width: 47%;
     top: -5px;
     right: 26px;
+  }  
+
+  .info-card:hover {
+    border-color: var(--teal);
+    transform: translateY(-3px);
   }
 
   .info-card-title {
@@ -693,7 +709,7 @@
   .info-row:last-child { border-bottom: none; }
 
   .info-row .day { color: var(--text-muted); }
-  .info-row .time { color: var(--highlight2); font-weight: 600; }
+  .info-row .time { color: var(--text-muted); font-weight: 600; }
 
   .highlight-card {
     background: linear-gradient(135deg, var(--teal-dark), var(--teal-deeper));
@@ -710,7 +726,7 @@
   }
 
   .delivery-item .label { color: rgba(255,255,255,0.7); }
-  .delivery-item .value { color: var(--highlight2); font-weight: 700; }
+  .delivery-item .value { color: var(--text-muted); font-weight: 700; }
 
   /* ── KONTAKT ── */
   #kontakt {
@@ -749,6 +765,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    cursor: pointer;
   }
 
   .kontakt-details strong {
@@ -771,7 +788,7 @@
   .kontakt-details a:hover { color: var(--accent); }
 
   .gmaps-img {
-    width: 67%;
+    width: 42%;
   }
 
   .kontakt-form {
