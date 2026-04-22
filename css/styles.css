@@ -139,7 +139,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding: 120px 20px 80px;
+    padding: 108px 20px 80px;
   }
 
   .hero-bg {
@@ -177,7 +177,9 @@
   }
 
   .logo-img {
-    width: 100%;
+    width: 109%;
+    position: relative;
+    right: 36px;
   }
 
   .hero-sub {
@@ -469,7 +471,7 @@
     font-size: 0.72rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: var(--highlight);
+    color: var(--gold);
     background: rgba(13,27,30,0.85);
     padding: 3px 7px;
     border-radius: 3px;
@@ -975,7 +977,7 @@
       min-height: 70px;
       flex-wrap: wrap;
     }
-    .fehmis-img { width: 108px; }
+    
     .nav-logo { line-height: 1.2; }
     .nav-toggle { display: inline-flex; }
     .nav-links {
@@ -989,6 +991,10 @@
     }
     .nav-open .nav-links { display: flex; }
     .nav-links a { font-size: 0.9rem; letter-spacing: 0.8px; }
+    
+    .logo-img { right: 16px; }
+    .hero-tags { width: 100%; }
+    .fehmis-img { width: 108px; }
 
     .spez-layout,
     .partyservice-layout,
