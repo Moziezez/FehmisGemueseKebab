@@ -14,10 +14,12 @@
       --teal-light: #00c4db;
       --bg-dark: #0d1b1e;
       --bg-card: #112226;
-      --text-light: #f0f8fa;
+      --text-light: whitesmoke;
       --text-muted: #8ab8bf;
       --accent: #00e5ff;
       --gold: #f0c060;
+      --highlight: #ffc78b;
+      --highlight2: #ffe0bfe3;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -62,7 +64,7 @@
       font-size: 0.95rem;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--text-muted);
+      color: var(--highlight2);
       text-decoration: none;
       position: relative;
       transition: color 0.25s;
@@ -73,12 +75,12 @@
       position: absolute;
       left: 0; bottom: -4px;
       width: 0; height: 2px;
-      background: var(--accent);
+      background: var(--highlight);
       transition: width 0.3s;
     }
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: var(--highlight);
     }
 
     .nav-links a:hover::after { width: 100%; }
@@ -167,7 +169,7 @@
       font-size: 0.78rem;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--gold);
       border: 1px solid rgba(0,229,255,0.35);
       padding: 6px 18px;
       border-radius: 30px;
@@ -182,7 +184,7 @@
     .hero-sub {
       margin-top: 20px;
       font-size: 1.15rem;
-      color: var(--text-muted);
+      color: var(--highlight2);
       max-width: 500px;
       margin-inline: auto;
       animation: fadeUp 0.8s 0.3s ease both;
@@ -223,7 +225,7 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       background: var(--teal);
-      color: #fff;
+      color: var(--highlight2);
       border: none;
       padding: 14px 36px;
       border-radius: 4px;
@@ -232,7 +234,7 @@
       transition: background 0.25s, transform 0.2s;
     }
 
-    .btn-primary:hover { background: var(--teal-light); transform: translateY(-2px); }
+    .btn-primary:hover { background: var(--highlight); transform: translateY(-2px); color: white; }
 
     .btn-outline {
       font-family: 'Oswald', sans-serif;
@@ -252,6 +254,7 @@
     .btn-outline:hover {
       background: rgba(0,229,255,0.1);
       transform: translateY(-2px);
+      border-color: var(--highlight);
     }
 
     .scroll-indicator {
@@ -263,7 +266,7 @@
       flex-direction: column;
       align-items: center;
       gap: 6px;
-      color: var(--text-muted);
+      color: var(--highlight2);
       font-size: 0.75rem;
       letter-spacing: 2px;
       text-transform: uppercase;
@@ -296,7 +299,7 @@
       font-family: 'Oswald', sans-serif;
       font-size: clamp(2rem, 4vw, 3.2rem);
       font-weight: 700;
-      color: #fff;
+      color: var(--highlight);
       margin-bottom: 14px;
     }
 
@@ -399,7 +402,7 @@
       font-family: 'Oswald', sans-serif;
       font-size: 1rem;
       letter-spacing: 0.5px;
-      color: var(--text-light);
+      color: var(--highlight2);
       margin-bottom: 4px;
     }
 
@@ -504,21 +507,21 @@
       cursor: pointer;
     }
 
-    /* ── LIEFERSERVICE ── */
-    #lieferservice {
+    /* ── PARTYSERVICE ── */
+    #partyservice {
       padding: 100px 40px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .delivery-layout {
+    .partyservice-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
     }
 
-    .delivery-image-wrap {
+    .partyservice-image-wrap {
       position: relative;
       border-radius: 12px;
       
@@ -526,14 +529,67 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
 
-    .delivery-image-wrap img {
+    .partyservice-image-wrap img {
       width: 100%;
       display: block;
       aspect-ratio: 4/3;
       object-fit: cover;
     }
 
-    .delivery-text p {
+    .partyservice-slide-controls {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+      padding: 0 10px;
+    }
+
+    .partyservice-arrow {
+      pointer-events: auto;
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(13, 27, 30, 0.7);
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+
+    .partyservice-arrow:hover {
+      background: rgba(0, 154, 173, 0.85);
+    }
+
+    .partyservice-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 12px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .partyservice-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.45);
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .partyservice-dot.active {
+      background: var(--accent);
+    }
+
+    .partyservice-text p {
       font-size: 1.05rem;
       color: var(--text-muted);
       line-height: 1.7;
@@ -633,14 +689,14 @@
     .info-row:last-child { border-bottom: none; }
 
     .info-row .day { color: var(--text-muted); }
-    .info-row .time { color: var(--text-light); font-weight: 600; }
+    .info-row .time { color: var(--highlight2); font-weight: 600; }
 
     .highlight-card {
       background: linear-gradient(135deg, var(--teal-dark), var(--teal-deeper));
       border: none;
     }
 
-    .highlight-card .info-card-title { color: #fff; }
+    .highlight-card .info-card-title { color: var(--text-light); }
 
     .delivery-item {
       display: flex;
@@ -650,7 +706,7 @@
     }
 
     .delivery-item .label { color: rgba(255,255,255,0.7); }
-    .delivery-item .value { color: #fff; font-weight: 700; }
+    .delivery-item .value { color: var(--highlight2); font-weight: 700; }
 
     /* ── KONTAKT ── */
     #kontakt {
@@ -915,14 +971,14 @@
       .nav-links a { font-size: 0.9rem; letter-spacing: 0.8px; }
 
       .spez-layout,
-      .delivery-layout,
+      .partyservice-layout,
       .ueber-layout,
       .kontakt-layout { grid-template-columns: 1fr; gap: 40px; }
 
       .features-grid { grid-template-columns: 1fr; }
       .stats-row { gap: 24px; flex-wrap: wrap; }
 
-      #spezialitaeten, #speisekarte, #lieferservice, #ueber-uns, #kontakt, #impressum {
+      #spezialitaeten, #speisekarte, #partyservice, #ueber-uns, #kontakt, #impressum {
         padding: 70px 20px;
       }
 
@@ -961,7 +1017,7 @@
     <ul class="nav-links" id="primaryNav">
       <li><a href="#ueber-uns">Über</a></li>
       <li><a href="#speisekarte">Speisekarte</a></li>
-      <li><a href="#lieferservice">Lieferservice</a></li>
+      <li><a href="#partyservice">Partyservice</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
       <li><a href="#impressum">Impressum</a></li>
     </ul>
@@ -1067,19 +1123,28 @@
 
   <div class="divider"></div>
 
-  <!-- LIEFERSERVICE -->
-  <section id="lieferservice">
-    <div class="delivery-layout">
-      <div class="delivery-image-wrap reveal">
-        <img src="./images/Lieferservice.jpg" alt="Bild für Lieferservice" class="lieferservice-img" loading="lazy" />
+  <!-- PARTYSERVICE -->
+  <section id="partyservice">
+    <div class="partyservice-layout">
+      <div class="partyservice-image-wrap reveal">
+        <img src="./images/Partyservice.jpg" alt="Bild für Partyservice" class="partyservice-img" id="partyserviceSlideImage" loading="lazy" />
+        <div class="partyservice-slide-controls">
+          <button type="button" class="partyservice-arrow" id="partyservicePrev" aria-label="Vorheriges Bild">
+            &lt;
+          </button>
+          <button type="button" class="partyservice-arrow" id="partyserviceNext" aria-label="Nächstes Bild">
+            &gt;
+          </button>
+        </div>
+        <div class="partyservice-dots" id="partyserviceDots" aria-label="Partyservice Slideshow Navigation"></div>
         <div class="spez-corner"></div>
         <div class="spez-corner-bl"></div>
       </div>
-      <div class="delivery-text reveal reveal-delay-1">
+      <div class="partyservice-text reveal reveal-delay-1">
         <div class="section-label">Für Ihre Veranstaltung</div>
-        <h2 class="section-title">Lieferservice</h2>
+        <h2 class="section-title">Partyservice</h2>
         <p>
-          <b> Lieferservice in Goslar und Umgebung – bereits ab 10 Personen.</b> </br>
+          <b> Partyservice in Goslar und Umgebung – bereits ab 10 Personen.</b> </br>
           </br>
           Machen Sie Ihre nächste Geburtstagsfeier, Ihr Betriebsfest oder ein besonderes Jubiläum zu einem echten Genuss-Erlebnis. 🍽️✨ </br>
           </br>
@@ -1273,7 +1338,7 @@
     <ul class="footer-links">
       <li><a href="#ueber-uns">Über uns</a></li>
       <li><a href="#speisekarte">Speisekarte</a></li>
-      <li><a href="#lieferservice">Lieferservice</a></li>
+      <li><a href="#partyservice">Partyservice</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
       <li><a href="#impressum">Impressum</a></li>
     </ul>
@@ -1374,6 +1439,70 @@
         closeMenuImageModal();
       }
     });
+
+    // Partyservice slideshow
+    const partyserviceImages = [
+      { src: './images/Partyservice.jpg', alt: 'Bild für Partyservice' },
+      { src: './images/Partyservice1.jpg', alt: 'Partyservice Bild 1' },
+      { src: './images/Partyservice2.jpg', alt: 'Partyservice Bild 2' },
+      { src: './images/Partyservice3.jpg', alt: 'Partyservice Bild 3' },
+      { src: './images/Partyservice4.jpg', alt: 'Partyservice Bild 4' }
+    ];
+    const partyserviceImageEl = document.getElementById('partyserviceSlideImage');
+    const partyservicePrevBtn = document.getElementById('partyservicePrev');
+    const partyserviceNextBtn = document.getElementById('partyserviceNext');
+    const partyserviceDotsWrap = document.getElementById('partyserviceDots');
+    let partyserviceCurrentIndex = 0;
+    let partyserviceAutoTimer;
+
+    const renderPartyserviceSlide = (index) => {
+      const { src, alt } = partyserviceImages[index];
+      partyserviceImageEl.src = src;
+      partyserviceImageEl.alt = alt;
+
+      const dots = partyserviceDotsWrap.querySelectorAll('.partyservice-dot');
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('active', dotIndex === index);
+      });
+    };
+
+    const goToPartyserviceSlide = (index) => {
+      const total = partyserviceImages.length;
+      partyserviceCurrentIndex = (index + total) % total;
+      renderPartyserviceSlide(partyserviceCurrentIndex);
+    };
+
+    const startPartyserviceAutoplay = () => {
+      clearInterval(partyserviceAutoTimer);
+      partyserviceAutoTimer = setInterval(() => {
+        goToPartyserviceSlide(partyserviceCurrentIndex + 1);
+      }, 7000);
+    };
+
+    partyserviceImages.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'partyservice-dot';
+      dot.setAttribute('aria-label', `Bild ${index + 1} anzeigen`);
+      dot.addEventListener('click', () => {
+        goToPartyserviceSlide(index);
+        startPartyserviceAutoplay();
+      });
+      partyserviceDotsWrap.appendChild(dot);
+    });
+
+    partyservicePrevBtn.addEventListener('click', () => {
+      goToPartyserviceSlide(partyserviceCurrentIndex - 1);
+      startPartyserviceAutoplay();
+    });
+
+    partyserviceNextBtn.addEventListener('click', () => {
+      goToPartyserviceSlide(partyserviceCurrentIndex + 1);
+      startPartyserviceAutoplay();
+    });
+
+    goToPartyserviceSlide(0);
+    startPartyserviceAutoplay();
   </script>
 </body>
 </html>
