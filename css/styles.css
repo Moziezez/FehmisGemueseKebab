@@ -1,5 +1,5 @@
 :root {
-    --teal: #009aad;
+    --teal: #00b9cf;
     --teal-dark: #0098af;
     --teal-deeper: #004f5c;
     --teal-light: #00c4db;
@@ -37,7 +37,7 @@
     height: 70px;
     background: rgba(13, 27, 30, 0.92);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--text-muted); /* rgba(0, 154, 173, 0.25); */
+    border-bottom: 1px solid var(--teal-deeper); /* rgba(0, 154, 173, 0.25); */
     transition: background 0.3s;
   }
 
@@ -83,22 +83,11 @@
 
   .nav-links a:hover::after { width: 100%; }
 
-  .nav-cta {
-    background: var(--teal);
-    color: #fff !important;
-    padding: 8px 20px;
-    border-radius: 4px;
-    transition: background 0.25s !important;
-  }
-
-  .nav-cta:hover { background: var(--teal-light) !important; }
-  .nav-cta::after { display: none !important; }
-
   .nav-toggle {
     display: none;
     width: 42px;
     height: 42px;
-    border: 1px solid var(--text-muted);
+    border: 1px solid var(--teal-deeper);
     background: rgba(0, 154, 173, 0.1);
     border-radius: 8px;
     cursor: pointer;
@@ -169,7 +158,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--gold);
-    border: 1px solid var(--text-muted);
+    border: 1px solid var(--teal-deeper);
     padding: 6px 18px;
     border-radius: 30px;
     margin-bottom: 24px;
@@ -230,7 +219,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     background: var(--teal-deeper);
-    color: var(--gold);
+    color: var(--highlight);
     border: 1px solid var(--highlight2);
     padding: 14px 36px;
     border-radius: 4px;
@@ -303,7 +292,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
-    color: var(--teal-light);
+    color: var(--teal);
     margin-bottom: 14px;
   }
 
