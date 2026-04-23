@@ -159,10 +159,15 @@
     text-transform: uppercase;
     color: var(--gold);
     border: 1px solid var(--teal-deeper);
-    padding: 6px 18px;
+    padding: 6px 42px 6px 18px;
     border-radius: 30px;
     margin-bottom: 24px;
     animation: fadeUp 0.7s ease both;
+  }
+
+  .hero-badge .gmaps-img {
+    position: absolute;
+    width: 24px; top: 5px; right: 14px; 
   }
 
   .logo-img {
@@ -219,7 +224,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     background: var(--teal-deeper);
-    color: var(--highlight);
+    color: var(--text-muted);
     border: 1px solid var(--highlight2);
     padding: 14px 36px;
     border-radius: 4px;
@@ -958,10 +963,23 @@
   .reveal-delay-2 { transition-delay: 0.2s; }
   .reveal-delay-3 { transition-delay: 0.3s; }
 
+  /* ── NOTEBOOK ── */
+  @media (min-width: 769px) and (max-width: 1337px) {
+    body {
+      margin: 0;
+      transform: scale(0.8);
+      transform-origin: top left;
+      width: 125%;
+    }
+    #hero { 
+      height: 123dvh;
+    }
+  }
+
   /* ── MOBILE ── */
   @media (max-width: 768px) {
     nav {
-      padding: 14px;
+      padding: 12px;
       height: auto;
       min-height: 70px;
       flex-wrap: wrap;
@@ -980,8 +998,9 @@
     }
     .nav-open .nav-links { display: flex; }
     .nav-links a { font-size: 0.9rem; letter-spacing: 0.8px; }
-    
+
     .logo-img { right: 16px; }
+
     .hero-tags { width: 100%; }
     .fehmis-img { width: 108px; }
 
@@ -992,6 +1011,8 @@
 
     .features-grid { grid-template-columns: 1fr; }
     .stats-row { gap: 24px; flex-wrap: wrap; }
+
+    .info-card .info-img { width: 51%; top: 19px; right: 15px; }
 
     #spezialitaeten, #speisekarte, #partyservice, #ueber-uns, #kontakt, #impressum {
       padding: 70px 20px;
