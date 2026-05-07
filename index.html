@@ -2,25 +2,54 @@
 <html lang="de">
 
 <head>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32.png">
+  <meta name="theme-color" content="#0f0f0f">
+
   <meta charset="UTF-8" />
+  <meta property="og:title" content="Fehmi's Gemüse Kebap Goslar">
+  <meta property="og:description" content="Frischer Döner, Burger & Pizza. Liefer- und Partyservice für Goslar und Umgebung.">
+  <meta property="og:image" content="https://fehmis.de/images/Fehmi.jpg">
+  <meta property="og:url" content="https://fehmis.de">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fehmi's Gemüse Kebap Goslar</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Fehmi's Gemüse Kebap – Frischer Döner, Pizza, Pide, Burger & Lieferservice direkt am Bahnhof in Goslar. Hausgemachte Spezialitäten und Partyservice." />
+  <title>Fehmi's Gemüse Kebap: Döner, Burger, Pizza und mehr + Partyservice für Goslar</title>
+  <link rel="canonical" href="https://fehmis.de/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
-<body>
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Fehmi's Gemüse Kebap",
+    "image": "https://fehmis.de/images/Logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bahnhofsplatz 6",
+      "addressLocality": "Goslar",
+      "postalCode": "38640",
+      "addressCountry": "DE"
+    },
+    "telephone": "+4953213949685",
+    "servesCuisine": ["Turkish", "Kebab", "Döner", "Pizza", " Pasta", "Salads", "Burgers", "Baguettes"],
+    "url": "https://fehmis.de"
+  }
+</script>
+
+<body>
   <!-- NAVBAR -->
   <nav>
     <a href="#hero" class="nav-logo">
-      <img src="./images/Fehmis.png" alt="Unser Logo" class="fehmis-img" loading="lazy" />
+      <img src="./images/Fehmis.png" alt="Fehmi's Gemüse Kebap – Beste Döner-Spezialitäten in Goslar" class="fehmis-img" loading="lazy" />
     </a>
-    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menü öffnen" aria-expanded="false"
-      aria-controls="primaryNav">
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primaryNav">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
@@ -46,7 +75,9 @@
         </div>
       </a>
       <div class="spez-image-wrap reveal visible">
-        <img src="./images/Logo2.png" alt="Unser Logo" class="logo-img" loading="lazy">
+        <h1 class="seo-hidden">Beste Döner-Spezialitäten in Goslar. Pizza, Pasta, Pide, Baguettes und mehr.</h1>
+
+        <img src="./images/Logo.png" alt="Fehmi's Gemüse Kebap Goslar – Frischer Döner, Burger, Pizza und Mehr" class="logo-img" loading="lazy">
 
         <div class="spez-corner"></div>
         <div class="spez-corner-bl"></div>
@@ -77,7 +108,7 @@
   <section id="spezialitaeten">
     <div class="spez-layout">
       <div class="spez-image-wrap reveal">
-        <img src="./images/Gericht2.jpg" alt="Unsere Spezialität" class="spezialitaeten-img" loading="lazy" />
+        <img src="./images/Gericht2.jpg" alt="Unsere Steak Döner Spezialität" class="spezialitaeten-img" loading="lazy" />
 
         <div class="spez-corner"></div>
         <div class="spez-corner-bl"></div>
@@ -132,11 +163,11 @@
     </div>
     <div class="menu-images">
       <div class="menu-img-wrap reveal">
-        <img src="./images/Speisekarte1.jpeg" alt="Speisekarte Seite 1 – Fehmi's Gemüse Kebap" loading="lazy" />
+        <img src="./images/Speisekarte1.jpeg" alt="Speisekarte mit Überbackenem Döner, Grill Spezialitäten, Salat und Getränken – Fehmi's Gemüse Kebap" loading="lazy" />
         <div class="menu-img-label">Seite 1</div>
       </div>
       <div class="menu-img-wrap reveal reveal-delay-1">
-        <img src="./images/Speisekarte2.jpeg" alt="Speisekarte Seite 2 – Fehmi's Gemüse Kebap" loading="lazy" />
+        <img src="./images/Speisekarte2.jpeg" alt="Speisekarte mit Suppe, Döner, Pizza, Schnitzel, Pide, Baguettes, Burger und Pasta – Fehmi's Gemüse Kebap" loading="lazy" />
         <div class="menu-img-label">Seite 2</div>
       </div>
     </div>
@@ -148,8 +179,7 @@
   <section id="partyservice">
     <div class="partyservice-layout">
       <div class="partyservice-image-wrap reveal">
-        <img src="./images/Partyservice.jpg" alt="Bild für Partyservice" class="partyservice-img"
-          id="partyserviceSlideImage" loading="lazy" />
+        <img src="./images/Partyservice.jpg" alt="Partyservice in Goslar und Umgebung" class="partyservice-img" id="partyserviceSlideImage" loading="lazy" />
         <div class="partyservice-slide-controls">
           <button type="button" class="partyservice-arrow" id="partyservicePrev" aria-label="Vorheriges Bild">
             &lt;
@@ -195,11 +225,15 @@
         <div class="section-label">Wer wir sind</div>
         <h2 class="section-title">Über Fehmi's<br>Gemüse Kebap</h2>
         <div class="ueber-text">
-          <p>Willkommen bei Fehmi's – Ihrem Döner-Restaurant direkt am Bahnhofsplatz in Goslar. Bei uns steht Qualität
-            an erster Stelle: frisches Gemüse, hausgemachte Saucen und ausgewähltes Fleisch ergeben ein
-            unvergleichliches Geschmackserlebnis.</p>
-          <p>Von Döner und Kebap über Pide und Pizza bis hin zu Burgern und Baguettes – unsere Speisekarte bietet für
-            jeden Geschmack etwas. Wir freuen uns auf Ihren Besuch oder Ihre Bestellung!</p>
+          <p>
+            Willkommen bei Fehmi's – Ihrem Dönerrestaurant und Lieferservice direkt am Bahnhof in Goslar.
+            Bei uns steht Qualität an erster Stelle: frisches Gemüse, hausgemachte Saucen und ausgewähltes Fleisch
+            ergeben ein unvergleichliches Geschmackserlebnis.
+          </p>
+          <p>
+            Von Döner und Kebap über Pide und Pizza bis hin zu Burgern und Baguettes – unsere Speisekarte bietet für
+            jeden Geschmack etwas. Wir freuen uns auf Ihren Besuch oder Ihre Bestellung!
+          </p>
         </div>
         <div class="stats-row">
           <div class="stat">
@@ -322,19 +356,19 @@
         <div class="form-title">Nachricht senden</div>
         <div class="form-group">
           <label>Name</label>
-          <input type="text" id="ct-name" placeholder="Ihr Name" />
+          <input type="text" id="ct-name" placeholder="Ihr Name" name="name" />
         </div>
         <div class="form-group">
           <label>E-Mail</label>
-          <input type="email" id="ct-email" placeholder="ihre@email.de" />
+          <input type="email" id="ct-email" placeholder="ihre@email.de" name="email" />
         </div>
         <div class="form-group">
           <label>Telefon (optional)</label>
-          <input type="tel" id="ct-phone" placeholder="+49 …" />
+          <input type="tel" id="ct-phone" placeholder="+49 …" name="phone" />
         </div>
         <div class="form-group">
           <label>Nachricht</label>
-          <textarea id="ct-message" placeholder="Ihre Nachricht …"></textarea>
+          <textarea id="ct-message" placeholder="Ihre Nachricht …" name="message"></textarea>
         </div>
         <button class="form-submit" onclick="sendMail()">Nachricht senden</button>
       </div>
@@ -381,7 +415,7 @@
   <!-- FOOTER -->
   <footer>
     <a href="#hero" class="nav-logo">
-      <img src="./images/Fehmis.png" alt="Unser Logo" class="footer-logo" loading="lazy" />
+      <img src="./images/Fehmis.png" alt="Fehmi's Gemüse Kebap Goslar" class="footer-logo" loading="lazy" />
     </a>
     <div class="footer-tagline">Gemüse Kebap · Goslar</div>
     <ul class="footer-links">
@@ -401,193 +435,10 @@
     <button type="button" class="menu-image-modal-close" id="menuImageModalClose" aria-label="Popup schließen">
       ×
     </button>
-    <img id="menuImageModalImg" alt="Vergrößerte Speisekarte" />
+    <img id="menuImageModalImg" alt="Speisekarte mit Döner, Pizza, Salat und Getränke." />
   </div>
 
-  <script>
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    }, {
-      threshold: 0.12
-    });
-    reveals.forEach(el => observer.observe(el));
-
-    // Navbar background on scroll
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      nav.style.background = window.scrollY > 60 ?
-        'rgba(13,27,30,0.98)' :
-        'rgba(13,27,30,0.92)';
-    });
-
-    // Mobile nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('primaryNav');
-
-    const setMobileMenuState = (open) => {
-      nav.classList.toggle('nav-open', open);
-      navToggle.setAttribute('aria-expanded', String(open));
-      navToggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
-    };
-
-    navToggle.addEventListener('click', () => {
-      const willOpen = !nav.classList.contains('nav-open');
-      setMobileMenuState(willOpen);
-    });
-
-    navLinks.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-          setMobileMenuState(false);
-        }
-      });
-    });
-
-    // Popup for menu images
-    const menuImageModal = document.getElementById('menuImageModal');
-    const menuImageModalImg = document.getElementById('menuImageModalImg');
-    const menuImageModalClose = document.getElementById('menuImageModalClose');
-    const clickableMenuImages = document.querySelectorAll(
-      '.menu-img-wrap img[src*="Speisekarte1"], .menu-img-wrap img[src*="Speisekarte2"]'
-    );
-
-    const closeMenuImageModal = () => {
-      menuImageModal.classList.remove('active');
-      menuImageModal.setAttribute('aria-hidden', 'true');
-      menuImageModalImg.src = '';
-    };
-
-    clickableMenuImages.forEach((img) => {
-      img.addEventListener('click', () => {
-        menuImageModalImg.src = img.src;
-        menuImageModalImg.alt = img.alt;
-        menuImageModal.classList.add('active');
-        menuImageModal.setAttribute('aria-hidden', 'false');
-      });
-    });
-
-    menuImageModalClose.addEventListener('click', closeMenuImageModal);
-    menuImageModal.addEventListener('click', (event) => {
-      if (event.target === menuImageModal) {
-        closeMenuImageModal();
-      }
-    });
-
-    window.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        closeMenuImageModal();
-      }
-    });
-
-    // Partyservice slideshow
-    const partyserviceImages = [{
-      src: './images/Partyservice.jpg',
-      alt: 'Bild für Partyservice'
-    },
-    {
-      src: './images/Partyservice1.jpg',
-      alt: 'Partyservice Bild 1'
-    },
-    {
-      src: './images/Partyservice2.jpg',
-      alt: 'Partyservice Bild 2'
-    },
-    {
-      src: './images/Partyservice3.jpg',
-      alt: 'Partyservice Bild 3'
-    },
-    {
-      src: './images/Partyservice4.jpg',
-      alt: 'Partyservice Bild 4'
-    }
-    ];
-    const partyserviceImageEl = document.getElementById('partyserviceSlideImage');
-    const partyservicePrevBtn = document.getElementById('partyservicePrev');
-    const partyserviceNextBtn = document.getElementById('partyserviceNext');
-    const partyserviceDotsWrap = document.getElementById('partyserviceDots');
-    let partyserviceCurrentIndex = 0;
-    let partyserviceAutoTimer;
-
-    const renderPartyserviceSlide = (index) => {
-      const {
-        src,
-        alt
-      } = partyserviceImages[index];
-      partyserviceImageEl.src = src;
-      partyserviceImageEl.alt = alt;
-
-      const dots = partyserviceDotsWrap.querySelectorAll('.partyservice-dot');
-      dots.forEach((dot, dotIndex) => {
-        dot.classList.toggle('active', dotIndex === index);
-      });
-    };
-
-    const goToPartyserviceSlide = (index) => {
-      const total = partyserviceImages.length;
-      partyserviceCurrentIndex = (index + total) % total;
-      renderPartyserviceSlide(partyserviceCurrentIndex);
-    };
-
-    const startPartyserviceAutoplay = () => {
-      clearInterval(partyserviceAutoTimer);
-      partyserviceAutoTimer = setInterval(() => {
-        goToPartyserviceSlide(partyserviceCurrentIndex + 1);
-      }, 7000);
-    };
-
-    partyserviceImages.forEach((_, index) => {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'partyservice-dot';
-      dot.setAttribute('aria-label', `Bild ${index + 1} anzeigen`);
-      dot.addEventListener('click', () => {
-        goToPartyserviceSlide(index);
-        startPartyserviceAutoplay();
-      });
-      partyserviceDotsWrap.appendChild(dot);
-    });
-
-    partyservicePrevBtn.addEventListener('click', () => {
-      goToPartyserviceSlide(partyserviceCurrentIndex - 1);
-      startPartyserviceAutoplay();
-    });
-
-    partyserviceNextBtn.addEventListener('click', () => {
-      goToPartyserviceSlide(partyserviceCurrentIndex + 1);
-      startPartyserviceAutoplay();
-    });
-
-    goToPartyserviceSlide(0);
-    startPartyserviceAutoplay();
-
-    async function sendMail() {
-      const name = document.getElementById("ct-name").value;
-      const email = document.getElementById("ct-email").value;
-      const phone = document.getElementById("ct-phone")?.value || null;
-      const message = document.getElementById("ct-message").value;
-
-      await fetch("https://vedaversum.eu-4.evennode.com/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          message
-        })
-      });
-      alert('Vielen Dank für Ihre Nachricht! Wir melden uns bald.');
-    }
-  </script>
+  <script src="js/func.js"></script>
 </body>
 
 </html>
