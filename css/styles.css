@@ -257,8 +257,8 @@
 
   .scroll-indicator {
     position: absolute;
-    bottom: 30px;
-    left: 50%;
+    bottom: 12dvh;
+    left: 70%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -1003,6 +1003,7 @@
 
     .hero-tags { width: 100%; }
     .fehmis-img { width: 108px; }
+    .scroll-indicator { left: 80%; bottom: 5dvh; }
 
     .spez-layout,
     .partyservice-layout,
