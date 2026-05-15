@@ -1,7 +1,62 @@
+/* oswald-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/oswald-v57-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* oswald-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/oswald-v57-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* oswald-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/oswald-v57-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/nunito-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/nunito-v32-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/nunito-v32-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
 :root {
-    --teal: #00b9cf;
-    --teal-dark: #0098af;
-    --teal-deeper: #004f5c;
+    --teal: #12b6db; /* color 1 */
+    --teal-dark: #0098af;  /* rgba(37, 150, 190) #12b6db */
+    --teal-deeper: #2596be; /* rgba(37, 150, 190) */
     --teal-light: #00c4db;
     --bg-dark: #0d1b1e;
     --bg-card: #112226;
@@ -297,7 +352,7 @@
     font-family: 'Oswald', sans-serif;
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
-    color: var(--teal);
+    color: var(--teal-dark);
     margin-bottom: 14px;
   }
 
@@ -734,6 +789,7 @@
   .kontakt-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 55%;
     gap: 60px;
     margin-top: 60px;
   }
@@ -791,7 +847,9 @@
     background: var(--bg-card);
     border: 1px solid rgba(0,154,173,0.18);
     border-radius: 12px;
-    padding: 40px;
+    padding: 39px;
+    padding-top: 39px;
+    padding-top: 27px;
   }
 
   .form-title {
@@ -965,7 +1023,7 @@
 
   /* ── NOTEBOOK ── */
   @media (min-width: 769px) and (max-width: 1337px) {
-    body {
+    .screen-wrapper {
       margin: 0;
       transform: scale(0.8);
       transform-origin: top left;

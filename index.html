@@ -18,8 +18,6 @@
   <meta name="description" content="Fehmi's Gemüse Kebap – Frischer Döner, Pizza, Pide, Burger & Lieferservice direkt am Bahnhof in Goslar. Hausgemachte Spezialitäten und Partyservice." />
   <title>Fehmi's Gemüse Kebap: Döner, Burger, Pizza und mehr + Partyservice für Goslar</title>
   <link rel="canonical" href="https://fehmis.de/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
@@ -44,393 +42,401 @@
 </script>
 
 <body>
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#hero" class="nav-logo">
-      <img src="./images/Fehmis.png" alt="Fehmi's Gemüse Kebap – Beste Döner-Spezialitäten in Goslar" class="fehmis-img" loading="lazy" />
-    </a>
-    <button class="nav-toggle" id="navToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primaryNav">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <ul class="nav-links" id="primaryNav">
-      <li><a href="#ueber-uns">Über</a></li>
-      <li><a href="#speisekarte">Speisekarte</a></li>
-      <li><a href="#partyservice">Partyservice</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-      <li><a href="#impressum">Impressum</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-      <a href="https://maps.app.goo.gl/yCbcvSKvRmxgC9Nv8" target="_blank">
-        <div class="hero-badge">
-          📍 Direkt am Bahnhof in Goslar
-          <img class="gmaps-img" src="./images/Gmaps.png" />
-        </div>
+  <div class="screen-wrapper">
+    <!-- NAVBAR -->
+    <nav>
+      <a href="#hero" class="nav-logo">
+        <img src="./images/Fehmis.png" alt="Fehmi's Gemüse Kebap – Beste Döner-Spezialitäten in Goslar" class="fehmis-img" loading="lazy" />
       </a>
-      <div class="spez-image-wrap reveal visible">
-        <h1 class="seo-hidden">Beste Döner-Spezialitäten in Goslar. Pizza, Pasta, Pide, Baguettes und mehr.</h1>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primaryNav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links" id="primaryNav">
+        <li><a href="#ueber-uns">Über</a></li>
+        <li><a href="#speisekarte">Speisekarte</a></li>
+        <li><a href="#partyservice">Partyservice</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+      </ul>
+    </nav>
 
-        <img src="./images/Logo.png" alt="Fehmi's Gemüse Kebap Goslar – Frischer Döner, Burger, Pizza und Mehr" class="logo-img" loading="lazy">
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <a href="https://maps.app.goo.gl/yCbcvSKvRmxgC9Nv8" target="_blank">
+          <div class="hero-badge">
+            📍 Direkt am Bahnhof in Goslar
+            <img class="gmaps-img" src="./images/Gmaps.png" />
+          </div>
+        </a>
+        <div class="spez-image-wrap reveal visible">
+          <h1 class="seo-hidden">Beste Döner-Spezialitäten in Goslar. Pizza, Pasta, Pide, Baguettes und mehr.</h1>
 
-        <div class="spez-corner"></div>
-        <div class="spez-corner-bl"></div>
-      </div>
-      <p class="hero-sub">🌿 Frische Zutaten, authentischer Geschmack – Goslar's beste Döner-Adresse seit Jahren.</p>
-      <div class="hero-tags">
-        <span class="hero-tag">🌮 Kebap</span>
-        <span class="hero-tag">🥙 Döner</span>
-        <span class="hero-tag">🌯 Pide</span>
-        <span class="hero-tag">🍝 Pasta</span>
-        <span class="hero-tag">🍕 Pizza</span>
-        <span class="hero-tag">🥗 Salat</span>
-        <span class="hero-tag">🍔 Burger</span>
-        <span class="hero-tag">🥖 Baguette</span>
-      </div>
-      <div class="hero-buttons">
-        <a href="#speisekarte" class="btn-primary">Speisekarte ansehen</a>
-        <a href="#kontakt" class="btn-outline">Bestellen</a>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      scroll
-    </div>
-  </section>
+          <img src="./images/Logo.png" alt="Fehmi's Gemüse Kebap Goslar – Frischer Döner, Burger, Pizza und Mehr" class="logo-img" loading="lazy">
 
-  <!-- SPEZIALITÄTEN -->
-  <section id="spezialitaeten">
-    <div class="spez-layout">
-      <div class="spez-image-wrap reveal">
-        <img src="./images/Gericht2.jpg" alt="Unsere Steak Döner Spezialität" class="spezialitaeten-img" loading="lazy" />
-
-        <div class="spez-corner"></div>
-        <div class="spez-corner-bl"></div>
-      </div>
-      <div class="reveal reveal-delay-1">
-        <div class="section-label">Unsere Spezialitäten</div>
-        <h2 class="section-title">Handgemacht mit<br>Leidenschaft</h2>
-        <p class="section-desc">
-          Bei Fehmi's wird jedes Gericht mit frischen Zutaten und viel Liebe zubereitet. Von klassischen
-          Döner-Variationen bis hin zu hausgemachten Pide und knusprigen Pizzen.</br>
-          Kommen Sie gerne vorbei oder bestellen Sie bequem telefonisch oder online. Wir freuen uns auf Sie!
-        </p>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🥗</div>
-            <div class="feature-name">Frische Zutaten</div>
-            <div class="feature-desc">Täglich frisch zubereitete Salate, Gemüse & Saucen.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🫓</div>
-            <div class="feature-name">Hausgemacht</div>
-            <div class="feature-desc">Lahmacun & Pide direkt aus unserem Steinofen.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🌱</div>
-            <div class="feature-name">Vegetarisch</div>
-            <div class="feature-desc">Vielfältige vegetarische & vegane Optionen.</div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🛵</div>
-            <div class="feature-name">Lieferservice</div>
-            <div class="feature-desc">Schnelle Lieferung in Goslar & Umgebung.</div>
-          </div>
+          <div class="spez-corner"></div>
+          <div class="spez-corner-bl"></div>
+        </div>
+        <p class="hero-sub">🌿 Frische Zutaten, authentischer Geschmack – Goslar's beste Döner-Adresse seit Jahren.</p>
+        <div class="hero-tags">
+          <span class="hero-tag">🌮 Kebap</span>
+          <span class="hero-tag">🥙 Döner</span>
+          <span class="hero-tag">🌯 Pide</span>
+          <span class="hero-tag">🍝 Pasta</span>
+          <span class="hero-tag">🍕 Pizza</span>
+          <span class="hero-tag">🥗 Salat</span>
+          <span class="hero-tag">🍔 Burger</span>
+          <span class="hero-tag">🥖 Baguette</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#speisekarte" class="btn-primary">Speisekarte ansehen</a>
+          <a href="#kontakt" class="btn-outline">Bestellen</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- SPEISEKARTE -->
-  <section id="speisekarte">
-    <div class="menu-header reveal">
-      <div class="sp-flex1">
-        <div class="section-label">Was wir bieten</div>
-        <h2 class="section-title">Unsere Speisekarte</h2>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        scroll
       </div>
-      <p class="sp-flex2">
-        Alle Preise inkl. MwSt. </br>
-        Änderungen vorbehalten.
-      </p>
-    </div>
-    <div class="menu-images">
-      <div class="menu-img-wrap reveal">
-        <img src="./images/Speisekarte1.jpeg" alt="Speisekarte mit Überbackenem Döner, Grill Spezialitäten, Salat und Getränken – Fehmi's Gemüse Kebap" loading="lazy" />
-        <div class="menu-img-label">Seite 1</div>
-      </div>
-      <div class="menu-img-wrap reveal reveal-delay-1">
-        <img src="./images/Speisekarte2.jpeg" alt="Speisekarte mit Suppe, Döner, Pizza, Schnitzel, Pide, Baguettes, Burger und Pasta – Fehmi's Gemüse Kebap" loading="lazy" />
-        <div class="menu-img-label">Seite 2</div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider"></div>
+    <!-- SPEZIALITÄTEN -->
+    <section id="spezialitaeten">
+      <div class="spez-layout">
+        <div class="spez-image-wrap reveal">
+          <img src="./images/Gericht2.jpg" alt="Unsere Steak Döner Spezialität" class="spezialitaeten-img" loading="lazy" />
 
-  <!-- PARTYSERVICE -->
-  <section id="partyservice">
-    <div class="partyservice-layout">
-      <div class="partyservice-image-wrap reveal">
-        <img src="./images/Partyservice.jpg" alt="Partyservice in Goslar und Umgebung" class="partyservice-img" id="partyserviceSlideImage" loading="lazy" />
-        <div class="partyservice-slide-controls">
-          <button type="button" class="partyservice-arrow" id="partyservicePrev" aria-label="Vorheriges Bild">
-            &lt;
-          </button>
-          <button type="button" class="partyservice-arrow" id="partyserviceNext" aria-label="Nächstes Bild">
-            &gt;
-          </button>
+          <div class="spez-corner"></div>
+          <div class="spez-corner-bl"></div>
         </div>
-        <div class="partyservice-dots" id="partyserviceDots" aria-label="Partyservice Slideshow Navigation"></div>
-        <div class="spez-corner"></div>
-        <div class="spez-corner-bl"></div>
-      </div>
-      <div class="partyservice-text reveal reveal-delay-1">
-        <div class="section-label">Für Ihre Veranstaltung</div>
-        <h2 class="section-title">Partyservice</h2>
-        <p>
-          <b> Partyservice in Goslar und Umgebung. Bereits ab 10 Personen.</b> </br>
-          </br>
-          Machen Sie Ihre nächste Geburtstagsfeier, Ihr Betriebsfest oder ein besonderes Jubiläum zu einem echten
-          Genuss-Erlebnis. 🍽️✨ </br>
-          </br>
-          Dank unserer <b>langjährigen Erfahrung</b> durften wir bereits zahlreiche Veranstaltungen erfolgreich
-          begleiten – von Firmenfeiern über Familienfeste bis hin zu besonderen Anlässen wie Jubiläen. </br>
-          </br>
-          Viele zufriedene Kunden schätzen nicht nur die Qualität unserer Speisen, sondern auch unseren zuverlässigen
-          und professionellen Service.
-
-          <b>Lehnen Sie sich entspannt zurück und genießen Sie Ihre Feier – wir kümmern uns um den Rest.</b>
-        </p>
-
-        <a href="#kontakt" class="btn-outline">Kontakt</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ÜBER UNS -->
-  <section id="ueber-uns">
-    <div class="ueber-bg"></div>
-    <div class="ueber-layout">
-      <div class="reveal">
-        <div class="section-label">Wer wir sind</div>
-        <h2 class="section-title">Über Fehmi's<br>Gemüse Kebap</h2>
-        <div class="ueber-text">
-          <p>
-            Willkommen bei Fehmi's – Ihrem Dönerrestaurant und Lieferservice direkt am Bahnhof in Goslar.
-            Bei uns steht Qualität an erster Stelle: frisches Gemüse, hausgemachte Saucen und ausgewähltes Fleisch
-            ergeben ein unvergleichliches Geschmackserlebnis.
+        <div class="reveal reveal-delay-1">
+          <div class="section-label">Unsere Spezialitäten</div>
+          <h2 class="section-title">Handgemacht mit<br>Leidenschaft</h2>
+          <p class="section-desc">
+            Bei Fehmi's wird jedes Gericht mit frischen Zutaten und viel Liebe zubereitet. Vom klassischen Döner und Steak-Döner, bis hin zu hausgemachten Pide und knusprigen Pizzen.</br>
+            Für jeden Geschmack etwas passendes, auch vegetarisch und vegan. <br>
+            Kommen Sie gerne vorbei oder bestellen Sie bequem telefonisch oder online. Wir freuen uns auf Sie!
           </p>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🥗</div>
+              <div class="feature-name">Frische Zutaten</div>
+              <div class="feature-desc">Täglich frisch zubereitete Salate, Gemüse & Saucen.</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🫓</div>
+              <div class="feature-name">Hausgemachte Spezialitäten</div>
+              <div class="feature-desc">Lahmacun & Pide direkt aus unserem Steinofen. Probieren Sie auch unseren Steak-Döner.</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌱</div>
+              <div class="feature-name">Vegetarisch</div>
+              <div class="feature-desc">Vielfältige vegetarische & vegane Optionen.</div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🛵</div>
+              <div class="feature-name">Partyservice</div>
+              <div class="feature-desc">Wir bereiten das Buffet auf Ihrer nächsten Veranstaltung, in Goslar & Umgebung.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SPEISEKARTE -->
+    <section id="speisekarte">
+      <div class="menu-header reveal">
+        <div class="sp-flex1">
+          <div class="section-label">Was wir bieten</div>
+          <h2 class="section-title">Unsere Speisekarte</h2>
+        </div>
+        <p class="sp-flex2">
+          Alle Preise inkl. MwSt. </br>
+          Änderungen vorbehalten.
+        </p>
+      </div>
+      <div class="menu-images">
+        <div class="menu-img-wrap reveal">
+          <img src="./images/Speisekarte1.jpeg" alt="Speisekarte mit Überbackenem Döner, Grill Spezialitäten, Salat und Getränken – Fehmi's Gemüse Kebap" loading="lazy" />
+          <div class="menu-img-label">Seite 1</div>
+        </div>
+        <div class="menu-img-wrap reveal reveal-delay-1">
+          <img src="./images/Speisekarte2.jpeg" alt="Speisekarte mit Suppe, Döner, Pizza, Schnitzel, Pide, Baguettes, Burger und Pasta – Fehmi's Gemüse Kebap" loading="lazy" />
+          <div class="menu-img-label">Seite 2</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PARTYSERVICE -->
+    <section id="partyservice">
+      <div class="partyservice-layout">
+        <div class="partyservice-image-wrap reveal">
+          <img src="./images/Partyservice.jpg" alt="Partyservice in Goslar und Umgebung" class="partyservice-img" id="partyserviceSlideImage" loading="lazy" />
+          <div class="partyservice-slide-controls">
+            <button type="button" class="partyservice-arrow" id="partyservicePrev" aria-label="Vorheriges Bild">
+              &lt;
+            </button>
+            <button type="button" class="partyservice-arrow" id="partyserviceNext" aria-label="Nächstes Bild">
+              &gt;
+            </button>
+          </div>
+          <div class="partyservice-dots" id="partyserviceDots" aria-label="Partyservice Slideshow Navigation"></div>
+          <div class="spez-corner"></div>
+          <div class="spez-corner-bl"></div>
+        </div>
+        <div class="partyservice-text reveal reveal-delay-1">
+          <div class="section-label">Für Ihre Veranstaltung</div>
+          <h2 class="section-title">Partyservice</h2>
           <p>
-            Von Döner und Kebap über Pide und Pizza bis hin zu Burgern und Baguettes – unsere Speisekarte bietet für
-            jeden Geschmack etwas. Wir freuen uns auf Ihren Besuch oder Ihre Bestellung!
+            <b> Partyservice in Goslar und Umgebung. Bereits ab 10 Personen.</b> </br>
+            </br>
+            Machen Sie Ihre nächste Geburtstagsfeier, Ihr Betriebsfest oder ein besonderes Jubiläum zu einem echten
+            Genuss-Erlebnis. 🍽️✨ </br>
+            </br>
+            Dank unserer <b>langjährigen Erfahrung</b> durften wir bereits zahlreiche Veranstaltungen erfolgreich
+            begleiten – von Firmenfeiern über Familienfeste bis hin zu besonderen Anlässen wie Jubiläen. </br>
+            </br>
+            Viele zufriedene Kunden schätzen nicht nur die Qualität unserer Speisen, sondern auch unseren zuverlässigen
+            und professionellen Service.
+
+            <b>Lehnen Sie sich entspannt zurück und genießen Sie Ihre Feier – wir kümmern uns um den Rest.</b>
           </p>
-        </div>
-        <div class="stats-row">
-          <div class="stat">
-            <div class="stat-num">100+</div>
-            <div class="stat-label">Gerichte</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">🏆</div>
-            <div class="stat-label">Hausgemacht</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">tägl.</div>
-            <div class="stat-label">Lieferservice</div>
-          </div>
+
+          <a href="#kontakt" class="btn-outline">Kontakt</a>
         </div>
       </div>
-      <div class="reveal reveal-delay-2">
-        <a href="#kontakt">
-          <div class="info-card">
-            <div class="info-card-title">🕐 Öffnungszeiten</div>
-            <div class="info-row">
-              <span class="day">Montag – Samstag</span>
-              <span class="time">10:00 – 22:00 Uhr</span>
-            </div>
-            <div class="info-row">
-              <span class="day">Sonntag</span>
-              <span class="time">11:00 – 22:00 Uhr</span>
-            </div>
-          </div>
-        </a>
-        <a href="#kontakt">
-          <div class="info-card highlight-card">
-            <div class="info-card-title">🛵 Lieferinformationen</div>
-            <div class="delivery-item">
-              <span class="label">Lieferzeiten</span>
-              <span class="value">tägl. 11:00–21:30 Uhr</span>
-            </div>
-            <div class="delivery-item">
-              <span class="label">Anfahrtskosten</span>
-              <span class="value">3,00 €</span>
-            </div>
-            <div class="delivery-item">
-              <span class="label">Mindestbestellung Goslar</span>
-              <span class="value">ab 20,00 €</span>
-            </div>
-            <div class="delivery-item">
-              <span class="label">Mindestbestellung außerh.</span>
-              <span class="value">ab 30,00 €</span>
-            </div>
-          </div>
-        </a>
-        <a href="#kontakt">
-          <div class="info-card">
-            <div class="info-card-title">📍 Adresse</div>
-            <div class="info-row" style="flex-direction: column; gap: 4px;">
-              <span>Bahnhofsplatz 6</span>
-              <span>38640 Goslar</span>
-            </div>
-            <img class="info-img" src="./images/Fehmi.jpg">
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider"></div>
+    <div class="divider"></div>
 
-  <!-- KONTAKT -->
-  <section id="kontakt">
-    <div class="reveal">
-      <div class="section-label">Schreib uns</div>
-      <h2 class="section-title">Kontakt</h2>
-    </div>
-    <div class="kontakt-layout">
-      <div class="kontakt-info reveal reveal-delay-1">
-        <div class="kontakt-item">
-          <a href="https://maps.app.goo.gl/yCbcvSKvRmxgC9Nv8" target="_blank">
-            <div class="kontakt-icon">📍</div>
+    <!-- ÜBER UNS -->
+    <section id="ueber-uns">
+      <div class="ueber-bg"></div>
+      <div class="ueber-layout">
+        <div class="reveal">
+          <div class="section-label">Wer wir sind</div>
+          <h2 class="section-title">Über Fehmi's<br>Gemüse Kebap</h2>
+          <div class="ueber-text">
+            <p>
+              Willkommen bei Fehmi's – Ihrem Dönerrestaurant und Lieferservice direkt am Bahnhof in Goslar.
+              Bei uns steht Qualität an erster Stelle: frisches Gemüse, hausgemachte Saucen und ausgewähltes Fleisch
+              ergeben ein unvergleichliches Geschmackserlebnis.
+            </p>
+            <p>
+              Von Döner und Kebap über Pide und Pizza bis hin zu Burgern und Baguettes – unsere Speisekarte bietet für
+              jeden Geschmack etwas. Wir freuen uns auf Ihren Besuch oder Ihre Bestellung!
+            </p>
+          </div>
+          <div class="stats-row">
+            <div class="stat">
+              <div class="stat-num">100+</div>
+              <div class="stat-label">Gerichte</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">🏆</div>
+              <div class="stat-label">Hausgemacht</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">tägl.</div>
+              <div class="stat-label">Lieferservice</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <a href="#kontakt">
+            <div class="info-card">
+              <div class="info-card-title">🕐 Öffnungszeiten</div>
+              <div class="info-row">
+                <span class="day">Montag – Samstag</span>
+                <span class="time">10:00 – 22:00 Uhr</span>
+              </div>
+              <div class="info-row">
+                <span class="day">Sonntag</span>
+                <span class="time">11:00 – 22:00 Uhr</span>
+              </div>
+            </div>
           </a>
-          <div class="kontakt-details">
-            <strong>Adresse</strong>
+          <a href="#kontakt">
+            <div class="info-card highlight-card">
+              <div class="info-card-title">🛵 Lieferinformationen</div>
+              <div class="delivery-item">
+                <span class="label">Lieferzeiten</span>
+                <span class="value">tägl. 11:00–21:30 Uhr</span>
+              </div>
+              <div class="delivery-item">
+                <span class="label">Anfahrtskosten</span>
+                <span class="value">3,00 €</span>
+              </div>
+              <div class="delivery-item">
+                <span class="label">Mindestbestellung Goslar</span>
+                <span class="value">ab 20,00 €</span>
+              </div>
+              <div class="delivery-item">
+                <span class="label">Mindestbestellung außerh.</span>
+                <span class="value">ab 30,00 €</span>
+              </div>
+            </div>
+          </a>
+          <a href="#kontakt">
+            <div class="info-card">
+              <div class="info-card-title">📍 Adresse</div>
+              <div class="info-row" style="flex-direction: column; gap: 4px;">
+                <span>Bahnhofsplatz 6</span>
+                <span>38640 Goslar</span>
+              </div>
+              <img class="info-img" src="./images/Fehmi.jpg">
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <div class="reveal">
+        <div class="section-label">Schreib uns</div>
+        <h2 class="section-title">Kontakt</h2>
+      </div>
+      <div class="kontakt-layout">
+        <div class="kontakt-info reveal reveal-delay-1">
+          <div class="kontakt-item">
             <a href="https://maps.app.goo.gl/yCbcvSKvRmxgC9Nv8" target="_blank">
-              <span>Bahnhofsplatz 6, 38640 Goslar</span>
+              <div class="kontakt-icon">📍</div>
+            </a>
+            <div class="kontakt-details">
+              <strong>Adresse</strong>
+              <a href="https://maps.app.goo.gl/yCbcvSKvRmxgC9Nv8" target="_blank">
+                <span>Bahnhofsplatz 6, 38640 Goslar</span>
+              </a>
+            </div>
+            <a href="https://maps.app.goo.gl/yCbcvSKvRmxgC9Nv8" target="_blank">
+              <img class="gmaps-img" src="./images/Gmaps.png" />
             </a>
           </div>
-          <a href="https://maps.app.goo.gl/yCbcvSKvRmxgC9Nv8" target="_blank">
-            <img class="gmaps-img" src="./images/Gmaps.png" />
-          </a>
-        </div>
-        <div class="kontakt-item">
-          <div class="kontakt-icon">📞</div>
-          <div class="kontakt-details">
-            <strong>Telefon</strong>
-            <a href="tel:+4953213949685">(05321) 39 49 685</a>
+          <div class="kontakt-item">
+            <div class="kontakt-icon">📞</div>
+            <div class="kontakt-details">
+              <strong>Telefon</strong>
+              <a href="tel:+4953213949685">(05321) 39 49 685</a>
+            </div>
+          </div>
+          <div class="kontakt-item">
+            <div class="kontakt-icon">📱</div>
+            <div class="kontakt-details">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/4915753314599" target="_blank">0157 – 5331 4599</a>
+            </div>
+          </div>
+          <div class="kontakt-item">
+            <div class="kontakt-icon">🕐</div>
+            <div class="kontakt-details">
+              <strong>Öffnungszeiten</strong>
+              <span>Mo–Sa 10:00–22:00 · So 11:00–21:30</span>
+            </div>
+          </div>
+          <div class="kontakt-item">
+            <div class="kontakt-icon">🛵</div>
+            <div class="kontakt-details">
+              <strong>Lieferzeiten</strong>
+              <span>Tägl. 11:00–21:30 Uhr</span>
+            </div>
           </div>
         </div>
-        <div class="kontakt-item">
-          <div class="kontakt-icon">📱</div>
-          <div class="kontakt-details">
-            <strong>WhatsApp</strong>
-            <a href="https://wa.me/4915753314599" target="_blank">0157 – 5331 4599</a>
+        <div class="kontakt-form reveal reveal-delay-2">
+          <div class="form-title">Bestellung aufgeben oder Partyservice anfragen</div>
+          <p>
+            Kontaktieren Sie uns gerne über Telefon oder WhatsApp. <br>
+            Wir freuen uns auf Ihre Nachricht und stehen Ihnen für Fragen, Bestellungen oder Anregungen jederzeit zur Verfügung!
+          </p>
+
+          <!-- 
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="ct-name" placeholder="Ihr Name" name="name" />
           </div>
-        </div>
-        <div class="kontakt-item">
-          <div class="kontakt-icon">🕐</div>
-          <div class="kontakt-details">
-            <strong>Öffnungszeiten</strong>
-            <span>Mo–Sa 10:00–22:00 · So 11:00–21:30</span>
+          <div class="form-group">
+            <label>E-Mail</label>
+            <input type="email" id="ct-email" placeholder="ihre@email.de" name="email" />
           </div>
-        </div>
-        <div class="kontakt-item">
-          <div class="kontakt-icon">🛵</div>
-          <div class="kontakt-details">
-            <strong>Lieferzeiten</strong>
-            <span>Tägl. 11:00–21:30 Uhr</span>
+          <div class="form-group">
+            <label>Telefon (optional)</label>
+            <input type="tel" id="ct-phone" placeholder="+49 …" name="phone" />
           </div>
+          <div class="form-group">
+            <label>Nachricht</label>
+            <textarea id="ct-message" placeholder="Ihre Nachricht …" name="message"></textarea>
+          </div>
+          <button class="form-submit" onclick="sendMail()">Nachricht senden</button> -->
+
         </div>
       </div>
-      <div class="kontakt-form reveal reveal-delay-2">
-        <div class="form-title">Nachricht senden</div>
-        <div class="form-group">
-          <label>Name</label>
-          <input type="text" id="ct-name" placeholder="Ihr Name" name="name" />
-        </div>
-        <div class="form-group">
-          <label>E-Mail</label>
-          <input type="email" id="ct-email" placeholder="ihre@email.de" name="email" />
-        </div>
-        <div class="form-group">
-          <label>Telefon (optional)</label>
-          <input type="tel" id="ct-phone" placeholder="+49 …" name="phone" />
-        </div>
-        <div class="form-group">
-          <label>Nachricht</label>
-          <textarea id="ct-message" placeholder="Ihre Nachricht …" name="message"></textarea>
-        </div>
-        <button class="form-submit" onclick="sendMail()">Nachricht senden</button>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- IMPRESSUM -->
+    <section id="impressum">
+      <div class="reveal">
+        <div class="section-label">Rechtliches</div>
+        <h2 class="section-title">Impressum</h2>
       </div>
-    </div>
-  </section>
+      <div class="impressum-card reveal reveal-delay-1">
+        <h3>Angaben gemäß § 5 TMG</h3>
+        <p>Fehmi's Gemüse Kebap<br>Bahnhofsplatz 6<br>38640 Goslar</p>
 
-  <div class="divider"></div>
+        <h3>Kontakt</h3>
+        <p>
+          Telefon: <a href="tel:+4953213949685">(05321) 39 49 685</a><br>
+          Mobil / WhatsApp: <a href="https://wa.me/4915753314599" target="_blank">0157 – 5331 4599</a>
+        </p>
 
-  <!-- IMPRESSUM -->
-  <section id="impressum">
-    <div class="reveal">
-      <div class="section-label">Rechtliches</div>
-      <h2 class="section-title">Impressum</h2>
-    </div>
-    <div class="impressum-card reveal reveal-delay-1">
-      <h3>Angaben gemäß § 5 TMG</h3>
-      <p>Fehmi's Gemüse Kebap<br>Bahnhofsplatz 6<br>38640 Goslar</p>
+        <h3>Haftungshinweis</h3>
+        <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den
+          Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
 
-      <h3>Kontakt</h3>
-      <p>
-        Telefon: <a href="tel:+4953213949685">(05321) 39 49 685</a><br>
-        Mobil / WhatsApp: <a href="https://wa.me/4915753314599">0157 – 5331 4599</a>
-      </p>
+        <h3>Urheberrecht</h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+          Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen
+          des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
 
-      <h3>Haftungshinweis</h3>
-      <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den
-        Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+        <h3>Angaben gemäß Speisekarte</h3>
+        <p>Alle Preise inkl. gesetzlicher MwSt. Druckfehler, Irrtümer und Preisänderungen vorbehalten. Diese Karte ist
+          gültig ab März 2024, alle vorhergehenden Speisekarten verlieren ihre Gültigkeit.</p>
 
-      <h3>Urheberrecht</h3>
-      <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
-        Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen
-        des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+        <h3>Allergene</h3>
+        <p>Informationen zu Allergenen erhalten Sie auf Anfrage. Unsere Speisen können Allergene enthalten. Bitte sprechen
+          Sie unser Personal an oder beachten Sie die Kennzeichnung auf der Speisekarte.</p>
+      </div>
+    </section>
 
-      <h3>Angaben gemäß Speisekarte</h3>
-      <p>Alle Preise inkl. gesetzlicher MwSt. Druckfehler, Irrtümer und Preisänderungen vorbehalten. Diese Karte ist
-        gültig ab März 2024, alle vorhergehenden Speisekarten verlieren ihre Gültigkeit.</p>
-
-      <h3>Allergene</h3>
-      <p>Informationen zu Allergenen erhalten Sie auf Anfrage. Unsere Speisen können Allergene enthalten. Bitte sprechen
-        Sie unser Personal an oder beachten Sie die Kennzeichnung auf der Speisekarte.</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <a href="#hero" class="nav-logo">
-      <img src="./images/Fehmis.png" alt="Fehmi's Gemüse Kebap Goslar" class="footer-logo" loading="lazy" />
-    </a>
-    <div class="footer-tagline">Gemüse Kebap · Goslar</div>
-    <ul class="footer-links">
-      <li><a href="#ueber-uns">Über uns</a></li>
-      <li><a href="#speisekarte">Speisekarte</a></li>
-      <li><a href="#partyservice">Partyservice</a></li>
-      <li><a href="#kontakt">Kontakt</a></li>
-      <li><a href="#impressum">Impressum</a></li>
-    </ul>
-    <div class="footer-copy">
-      © 2022 Fehmi's Gemüse Kebap · Bahnhofsplatz 6 · 38640 Goslar<br>
-      <small style="opacity: 0.5;">(05321) 39 49 685 · 0157–5331 4599</small>
-    </div>
-  </footer>
-
+    <!-- FOOTER -->
+    <footer>
+      <a href="#hero" class="nav-logo">
+        <img src="./images/Fehmis.png" alt="Fehmi's Gemüse Kebap Goslar" class="footer-logo" loading="lazy" />
+      </a>
+      <div class="footer-tagline">Gemüse Kebap · Goslar</div>
+      <ul class="footer-links">
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#speisekarte">Speisekarte</a></li>
+        <li><a href="#partyservice">Partyservice</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="#impressum">Impressum</a></li>
+      </ul>
+      <div class="footer-copy">
+        © 2022 Fehmi's Gemüse Kebap · Bahnhofsplatz 6 · 38640 Goslar<br>
+        <small style="opacity: 0.5;">(05321) 39 49 685 · 0157–5331 4599</small>
+      </div>
+    </footer>
+  </div>
   <div id="menuImageModal" class="menu-image-modal" aria-hidden="true">
     <button type="button" class="menu-image-modal-close" id="menuImageModalClose" aria-label="Popup schließen">
       ×
