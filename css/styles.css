@@ -311,9 +311,9 @@
   }
 
   .scroll-indicator {
-    position: absolute;
+    position: absolute; 
     bottom: 12dvh;
-    left: 70%;
+    right: 25%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -1037,7 +1037,7 @@
   /* ── MOBILE ── */
   @media (max-width: 768px) {
     nav {
-      padding: 12px;
+      padding: 7px;
       height: auto;
       min-height: 70px;
       flex-wrap: wrap;
@@ -1061,7 +1061,7 @@
 
     .hero-tags { width: 100%; }
     .fehmis-img { width: 108px; }
-    .scroll-indicator { left: 80%; bottom: 5dvh; }
+    .scroll-indicator { bottom: calc(12px + env(safe-area-inset-bottom)); right: calc(-12px + env(safe-area-inset-bottom)); }
 
     .spez-layout,
     .partyservice-layout,
